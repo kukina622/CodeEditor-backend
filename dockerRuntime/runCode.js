@@ -28,20 +28,24 @@ switch (args["language"]) {
 
 fs.writeFileSync(`main.${extension}`, args["UserCode"]);
 
+let runOptions={
+  timeout:5000
+}
+
 switch (args["language"]) {
   case "C":
-    lang_c()
+    lang_c(runOptions)
     break;
   case "C++":
-    lang_cpp()
+    lang_cpp(runOptions)
     break;
   case "Java":
-    lang_java()
+    lang_java(runOptions)
     break;
   case "JavaScript":
-    lang_js()
+    lang_js(runOptions)
     break;
   case "Python":
-    lang_py()
+    lang_py(runOptions)
     break;
 }

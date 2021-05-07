@@ -1,8 +1,8 @@
 const { exec } = require('child_process');
 const command = "java main.java";
 
-module.exports = function () {
-  exec(command, (error, stdout, stderr) => {
+module.exports = function (options) {
+  exec(command,options,(error, stdout, stderr) => {
     if (error) {
       console.log(0);
       console.log(stderr);
