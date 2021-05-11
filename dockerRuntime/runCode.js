@@ -27,6 +27,7 @@ switch (args["language"]) {
 }
 
 fs.writeFileSync(`main.${extension}`, args["UserCode"]);
+fs.writeFileSync(`input.txt`, args["UserInput"]);
 
 let runOptions={
   timeout:5000

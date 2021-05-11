@@ -1,7 +1,7 @@
 let Docker = require("dockerode");
 const streams = require("memory-streams");
 
-module.exports.compile = async function (language, UserCode) {
+module.exports.compile = async function (language, UserCode,UserInput) {
   let docker = new Docker();
   const stdout = new streams.WritableStream();
   const stderr = new streams.WritableStream();
@@ -14,7 +14,7 @@ module.exports.compile = async function (language, UserCode) {
       [stdout, stderr], 
       {
         Tty: false,
-        Env: [`language=${language}`, `UserCode=${UserCode}`],
+        Env: [`language=${language}`, `UserCode=${UserCode}`,`UserInput=${UserInput}`],
       }
     )
     .then(([res, container]) => {

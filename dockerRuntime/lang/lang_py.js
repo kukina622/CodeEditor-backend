@@ -1,5 +1,5 @@
 const { exec } = require("child_process");
-const command = "python3 main.py";
+const command = "python3 main.py < input.txt";
 
 module.exports = function (options) {
   exec(command,options,(error, stdout, stderr) => {

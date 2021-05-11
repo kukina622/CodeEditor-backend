@@ -1,5 +1,5 @@
 const { exec } = require("child_process");
-const command = "node main.js";
+const command = "node main.js < input.txt";
 
 module.exports = function (options) {
   exec(command,options,(error, stdout, stderr) => {

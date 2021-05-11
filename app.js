@@ -11,7 +11,8 @@ app.use("/compiler",middleware.checkLanguage)
 app.post("/compiler", async(req, res) => {
   let language = req.body.language;
   let UserCode = req.body.UserCode;
-  let compileResult = await docker.compile(language,UserCode)
+  let UserInput= req.body.UserInput;
+  let compileResult = await docker.compile(language,UserCode,UserInput)
   res.json({"status":true,"compileResult":compileResult})
 });
 

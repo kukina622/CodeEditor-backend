@@ -1,5 +1,5 @@
 const { exec } = require("child_process");
-const command = "gcc -o main.exe main.cpp && ./main.exe";
+const command = "gcc -o main.exe main.cpp && ./main.exe < input.txt";
 
 module.exports = function (options) {
   exec(command,options,(error, stdout, stderr) => {
