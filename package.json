@@ -10,6 +10,7 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build" : "docker build -t code_editor . --no-cache"
   }
 }
