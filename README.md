@@ -1,4 +1,13 @@
 # CodeEditor-backend
 
-The project use java,so you must download openjdk in dockerRuntime
-and modify the dockerfile
+### support language
+- C / C++
+- Java
+- JavaScript
+- Python
+
+### package
+- dockerode
+- express
+- memory-streams
+- nodemon
